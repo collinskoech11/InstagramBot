@@ -60,13 +60,13 @@ def main():
     driver.find_elements_by_xpath("//a[contains(text(), 'Log in')]")[0].click()
     try:
 
-        driver.find_element_by_xpath("//input[@aria-label='Username']").send_keys(USERNAME))
+        driver.find_element_by_xpath("//input[@aria-label='Username']").send_keys(USERNAME)
     except:
         driver.find_elements_by_xpath("//a[contains(text(), 'Log in')]")[1].click()
         time.sleep(1)
         driver.find_element_by_xpath("//input[@aria-label='Username']").send_keys(USERNAME)
 
-    driver.find_element_by_xpath("//input[@aria-label='Password']").send_keys(PASSWORD))
+    driver.find_element_by_xpath("//input[@aria-label='Password']").send_keys(PASSWORD)
     driver.find_elements_by_xpath("//button[contains(text(), 'Log in')]")[0].click()
     time.sleep(2)
     driver.find_elements_by_xpath("//button[contains(text(), 'Close')]")[0].click()
